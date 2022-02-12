@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
 
 :root {
-  --one: #FFCF00;
-  --two: #006DB7;
-  --three: #D01012;
+  --color1: #FFCF00;
+  --color2: #006DB7;
+  --color3: #D01012;
 }
 
 body {
@@ -36,8 +36,8 @@ body {
 }
 
 .navbar {
-  background: lightblue;
   grid-area: nav;
+  display: flex;
 }
 
 .navbar__content {
@@ -72,14 +72,51 @@ body {
 }
 
 .navbar__content ul li a {
-  color: var(--three);
+  color: var(--color3);
   font-weight: 300;
   text-decoration: none;
 }
 
+.main-content {
+  grid-area: section;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+
+  animation: 2s main-content 0.5s ease-in-out;
+}
+@keyframes main-content {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-content p:first-child {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0 0 -14px 44px;
+}
+.main-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 28px 0;
+}
+.main-content p:last-child {
+  font-weight: 100;
+  margin: 0;
+  width: 60%;
+}
+
+
+
+
+
 
 .loader {
-  background: var(--three);
+  background: var(--color3);
   width: 100%;
   height: 100%;
   display: flex;
